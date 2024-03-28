@@ -291,6 +291,7 @@
                                     <exclude>edu/java/rest/model/*</exclude>
                                     <exclude>edu/java/rest/api/exception/*</exclude>
                                     <exclude>edu/java/rest/api/*API*</exclude>
+                                    <exclude>edu/java/Neoflex*</exclude>
                                 </excludes>
                             </configuration>
                         </execution>
