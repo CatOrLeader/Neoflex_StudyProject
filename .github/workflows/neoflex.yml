@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build
     permissions:
-      contents: write
+      packages: write
       pull-requests: write
 
     steps:
@@ -30,7 +30,7 @@ jobs:
         uses: madrapps/jacoco-report@v1.6.1
         if: ( github.event_name != 'workflow_dispatch' )
         with:
-          paths: ${{ github.workspace }}/bot/target/site/jacoco/jacoco.xml
+          paths: ${{ github.workspace }}/target/site/jacoco/jacoco.xml
           token: ${{ secrets.GITHUB_TOKEN }}
           min-coverage-overall: 30
           min-coverage-changed-files: 30
@@ -45,7 +45,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '11'
           distribution: 'temurin'
           cache: maven
 
