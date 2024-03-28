@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: neoflex
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui"
+
+server:
+  port: 8080
+
+logging:
+  config: classpath:log4j2-plain.xml
